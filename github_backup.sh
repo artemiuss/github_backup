@@ -1,3 +1,5 @@
+#!/bin/bash
+
 scriptname=$(basename "$0")
 
 usage() {

@@ -1,5 +1,5 @@
 # github_backup
-Backup github repositories
+Backup github repositories. Developed to be executed from Git Bash.
 
 ## Usage notes
 ```github_backup.sh <GITHUB_USER> <OUTPUT_PATH>```

@@ -19,7 +19,7 @@ OUTPUT_PATH=$2
 curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
 
 cd "${OUTPUT_PATH}"
-mkdir "${USER}"
+mkdir -p "${USER}"
 cd "${USER}"
 curl -s "https://api.github.com/users/${USER}/repos" | jq '.[]|.html_url' -r > repo_list.txt
 

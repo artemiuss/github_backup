@@ -11,5 +11,5 @@ Where:
 ### Execute Bash Script (Using Git Bash) from Windows Task Scheduler
 
 ```
-cmd /c ""C:\Program Files\Git\bin\bash.exe" --login -i -- "<PATH_TO_SCRIPT>" <GITHUB_USER> <OUTPUT_PATH>"
+cmd /c ""C:\Program Files\Git\bin\bash.exe" --login -i -- <PATH_TO_SCRIPT> <GITHUB_USER> <OUTPUT_PATH>"
 ```

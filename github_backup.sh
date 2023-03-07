@@ -1,5 +1,3 @@
-#!/bin/bash
-
 scriptname=$(basename "$0")
 
 usage() {
@@ -30,7 +28,10 @@ PREFIX="https://github.com/${USER}/"
 while read p; do
   REPO_URL="$p"
   REPO_NAME=$(echo "${REPO_URL}" | awk -F "${PREFIX}" '{print $2}')
-  rm -f -r "${REPO_NAME}"
-  git clone "${REPO_URL}"
+  rm -rf "${REPO_NAME}.tar.gz"
+  git clone --depth=1 "${REPO_URL}"
+  rm -rf "${REPO_NAME}"/.git
+  tar czf "${REPO_NAME}.tar.gz" "${REPO_NAME}"
+  rm -rf "${REPO_NAME}"
   echo -e "\n"
 done <repo_list.txt
